@@ -53,7 +53,12 @@ export default {
 	},
 	methods: {
 		createUser() {
-			this.$inertia.post("/leads", this.form).then(() => {});
+			this.$inertia.post("/leads", this.form).then(() => {
+				this.$toast.success({
+					title: "Success",
+					message: "Category created succfuly"
+				});
+			});
 		}
 	}
 };

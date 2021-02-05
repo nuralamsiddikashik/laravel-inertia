@@ -57,7 +57,12 @@ export default {
 	methods: {
 		deleteUser(id) {
 			if (confirm("Are you sure delete the user")) {
-				this.$inertia.delete(`/leads/delete/${id}`);
+				this.$inertia.delete(`/leads/delete/${id}`).then(() => {
+					this.$toast.success({
+						title: "Delete",
+						message: "Lead Delete"
+					});
+				});
 			}
 		}
 	}

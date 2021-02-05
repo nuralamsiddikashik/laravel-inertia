@@ -57,7 +57,12 @@ export default {
 	},
 	methods: {
 		updateUser() {
-			this.$inertia.put(`/leads/${this.lead.id}`, this.form).then(() => {});
+			this.$inertia.put(`/leads/${this.lead.id}`, this.form).then(() => {
+				this.$toast.success({
+					title: "Success",
+					message: "Leads Update Succfuly"
+				});
+			});
 		}
 	}
 };

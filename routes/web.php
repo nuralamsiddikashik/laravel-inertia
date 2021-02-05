@@ -37,4 +37,4 @@ Route::get( '/leads/create', [UserController::class, 'create'] )->name( 'leads.c
 Route::post( '/leads', [UserController::class, 'store'] )->name( 'leads.store' );
 Route::get( '/leads/{lead}/edit', [UserController::class, 'edit'] )->name( 'leads.edit' );
 Route::put( '/leads/{lead}', [UserController::class, 'update'] )->name( 'leads.update' );
-Route::delete( '/leads/{lead}', [UserController::class, 'destroy'] )->name( 'leads.delete' );
+Route::delete( '/leads/delete/{id}', [UserController::class, 'destroy'] )->name( 'leads.delete' );

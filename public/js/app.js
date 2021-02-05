@@ -3157,7 +3157,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     deleteUser: function deleteUser(id) {
       if (confirm("Are you sure delete the user")) {
-        this.$inertia["delete"]("/leads/".concat(id));
+        this.$inertia["delete"]("/leads/delete/".concat(id));
       }
     }
   }

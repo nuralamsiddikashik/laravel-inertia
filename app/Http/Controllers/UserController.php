@@ -55,9 +55,12 @@ class UserController extends Controller {
 
     }
 
-    public function destroy( Lead $lead ) {
+    public function destroy( $id ) {
 
-        $lead->delete();
+        // $lead->delete();
+        // return redirect()->route( 'leads.index' );
+
+        Lead::where( 'id', $id )->delete();
         return redirect()->route( 'leads.index' );
     }
 }

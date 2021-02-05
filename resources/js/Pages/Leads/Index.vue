@@ -57,7 +57,7 @@ export default {
 	methods: {
 		deleteUser(id) {
 			if (confirm("Are you sure delete the user")) {
-				this.$inertia.delete(`/leads/${id}`);
+				this.$inertia.delete(`/leads/delete/${id}`);
 			}
 		}
 	}
